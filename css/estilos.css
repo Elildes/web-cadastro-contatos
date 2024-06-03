@@ -29,3 +29,13 @@
     font-weight: bold;
     font-size: x-large;
 }
+
+#botoes{
+    display: flex;
+    align-items: start;
+}
+
+#btn{
+    display: flex;
+    padding-right: 24px;
+}

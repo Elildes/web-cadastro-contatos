@@ -17,20 +17,37 @@
             <p id="cad-contatos">Cadastro de Contatos</p>
 
             <div id="formulario">
-                <form>
+                <form id="form-pessoa">
                     <div class="mb-3">
                       <label for="nome" class="form-label">Nome:</label>
-                      <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Digite seu nome">
-                      <div id="emailHelp" class="form-text">Nunca compartilhe seu e-mail com mais ninguém.</div>
+                      <input type="text" class="form-control" id="nome" aria-describedby="nomelHelp" placeholder="Digite seu nome">
+                      <div id="nomelHelp" class="form-text">Nunca compartilhe seu e-mail com mais ninguém.</div>
                     </div>
                     <div class="mb-3">
                       <label for="cpf" class="form-label">CPF:</label>
                       <input type="text" class="form-control" id="cpf" placeholder="Digite seu cpf">
                     </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-                  </form>
+
+                    <div>
+                        <div id="botoes">
+                            <div id="btn">
+                                <button id="btn-cadastrar" type="submit" class="btn btn-primary">Cadastrar</button>
+                            </div>
+                            <div id="btn">
+                                <button id="btn-exibir" type="submit" class="btn btn-primary">Exibir Contatos</button>
+                            </div>
+                            <div id="btn">
+                                <button id="btn-buscar" type="submit" class="btn btn-primary">Buscar Contato</button>
+                            </div>
+                            <div id="btn">
+                                <button id="btn-remover" type="submit" class="btn btn-primary">Remover Contato</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             <!--
                 nome, cpf, data_nascimento, endereco
+                Remover Contato
             -->                  
             </div>
         </div>
