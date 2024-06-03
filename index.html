@@ -20,35 +20,36 @@
                 <form id="form-pessoa">
                     <div class="mb-3">
                       <label for="nome" class="form-label">Nome:</label>
-                      <input type="text" class="form-control" id="nome" aria-describedby="nomelHelp" placeholder="Digite seu nome">
-                      <div id="nomelHelp" class="form-text">Nunca compartilhe seu e-mail com mais ninguém.</div>
+                      <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
                     </div>
                     <div class="mb-3">
                       <label for="cpf" class="form-label">CPF:</label>
                       <input type="text" class="form-control" id="cpf" placeholder="Digite seu cpf">
                     </div>
-
-                    <div>
-                        <div id="botoes">
-                            <div id="btn">
-                                <button id="btn-cadastrar" type="submit" class="btn btn-primary">Cadastrar</button>
-                            </div>
-                            <div id="btn">
-                                <button id="btn-exibir" type="submit" class="btn btn-primary">Exibir Contatos</button>
-                            </div>
-                            <div id="btn">
-                                <button id="btn-buscar" type="submit" class="btn btn-primary">Buscar Contato</button>
-                            </div>
-                            <div id="btn">
-                                <button id="btn-remover" type="submit" class="btn btn-primary">Remover Contato</button>
-                            </div>
+                    <div class="mb-3">
+                        <label for="data_nascimento" class="form-label">Data de nascimento:</label>
+                        <input type="date" class="form-control" id="data_nascimento"aria-describedby="dateHelp">
+                        <div id="dateHelp" class="form-text">Digite sua data de nascimento ou selecione no calendário.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="endereco" class="form-label">Endereco:</label>
+                        <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço">                        
+                    </div>
+                    <div id="botoes">
+                        <div id="btn">
+                            <button id="btn-cadastrar" type="submit" class="btn btn-primary">Cadastrar</button>
+                        </div>
+                        <div id="btn">
+                            <button id="btn-exibir" type="submit" class="btn btn-primary">Exibir Contatos</button>
+                        </div>
+                        <div id="btn">
+                            <button id="btn-buscar" type="submit" class="btn btn-primary">Buscar Contato</button>
+                        </div>
+                        <div id="btn">
+                            <button id="btn-remover" type="submit" class="btn btn-primary">Remover Contato</button>
                         </div>
                     </div>
-                </form>
-            <!--
-                nome, cpf, data_nascimento, endereco
-                Remover Contato
-            -->                  
+                </form>                 
             </div>
         </div>
     </article>
