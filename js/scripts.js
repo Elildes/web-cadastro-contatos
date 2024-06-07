@@ -88,6 +88,33 @@ function exibir() {
     }
 }
 
+/**
+ * Função Buscar Contato
+ */
+function buscarContato() {
+    
+    let cpf = String(prompt("Digite o CPF do contato que deseja buscar:"));
+
+    // teste:
+    console.log("CPF: " + cpf);
+    console.log("Typo cpf: " + typeof(cpf))
+
+    // Buscar cpf
+    for (indice in cadastros) {
+        if (cpf === cadastros[indice].cpf) {
+            // Retorno da busca pelo cpf
+            alert("Nome: " + cadastros[indice].nome + "\n"
+                + "Data de Nascimento: " + cadastros[indice].dataNascimento + "\n"
+                + "Endereço: " + cadastros[indice].endereco);
+            return;
+        }        
+    }
+
+    // Caso o CPF não seja encontrado
+    alert("CPF não encontrado!")
+}
+
+
 
 // Teste: print vetor
 function testePrintCadastro () {
