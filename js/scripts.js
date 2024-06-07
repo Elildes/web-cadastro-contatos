@@ -1,6 +1,9 @@
 
 const cadastros = [];
 
+/**
+ * Função cadastrar contatos
+ */
 function cadastrar() {
     let nome_ = document.getElementById('nome').value;
     let cpf_ = document.getElementById('cpf').value;
@@ -40,42 +43,45 @@ function exibir() {
 }
  */
 
-// teste
-//console.log(exibir());
-
+/**
+ * Função exibir contatos
+ */
 function exibir() {
-    // Exibição do cadastro salvos no array
     var article = document.querySelector('article');
 
-    var paragrafoNome = document.createElement('p');
-    var paragrafoCpf = document.createElement('p');
-    var paragrafoData = document.createElement('p');
-    var paragrafoEndereco = document.createElement('p');
+    var divCadastro = document.createElement('div');
+    
+    var divNome = document.createElement('div');
+    var divCpf = document.createElement('div');
+    var divData = document.createElement('div');
+    var divEndereco = document.createElement('div');
+    var novaLinha = document.createElement('br');
 
-    // Teste: adaptar
-    /**
-    paragrafoNome.textContent = "Nome: João Paulo da Silva";
-    paragrafoCpf.textContent = "CPF: 999.999.999-72";
-    paragrafoData.textContent = "Data de Nascimento: 16/12/1980";
-    paragrafoEndereco.textContent = "Endereço: Rua B, 420, Bela Vista, Natal/RN";
-     */
-
-    // Recupera dados do vetor
-    paragrafoNome.textContent = cadastros[i].nome;
-    paragrafoCpf.textContent = cadastros[i].cpf;
-    paragrafoData.textContent = cadastros[i].dataNascimento;
-    paragrafoEndereco.textContent = cadastros[i].dataNascimento;
+    divNome.textContent = cadastros[0].nome;
+    divCpf.textContent = cadastros[0].cpf;
+    divData.textContent = cadastros[0].dataNascimento;
+    divEndereco.textContent = cadastros[0].endereco;
 
     // Adiciona dados ao final da page
     // Obs.: exibe apenas dados de uma pessoa.
     // Implementar loop para exibir todos
-    article.appendChild(paragrafoNome);
-    article.appendChild(paragrafoCpf);
-    article.appendChild(paragrafoData);
-    article.appendChild(paragrafoEndereco);  
+    /**
+    article.appendChild(divNome);
+    article.appendChild(divCpf);
+    article.appendChild(divData);
+    article.appendChild(divEndereco);
+    article.appendChild(novaLinha);
+     */
+    divCadastro.appendChild(divNome);
+    divCadastro.appendChild(divCpf);
+    divCadastro.appendChild(divData);
+    divCadastro.appendChild(divEndereco);
+    divCadastro.appendChild(novaLinha);
+
+    article.appendChild(divCadastro);
 }
 
-/** Modelo: adicionar CSS (querySelector ??) a função exibir:
+/** Modelo: adicionar CSS a função exibir:
 <div id="cadastro">
     <div id="">João Paulo da Silva</div>
     <div>CPF: 999.999.999-99</div>
