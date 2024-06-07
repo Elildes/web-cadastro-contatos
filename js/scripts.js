@@ -46,6 +46,15 @@ function exibir() {
     // Recupera conteúdo da tag 'article'
     var article = document.querySelector('article');
 
+    // Verifica se a div 'divCadastrosGeral' está vazia e se o vetor 'cadastros' também está vazio
+    // senão, limpa os dados para eviar a duplicação de dados
+    var divCadastrosGeral = document.getElementById('divCadastrosGeral');
+    if (divCadastrosGeral && divCadastrosGeral.innerHTML == '' && cadastros.length == 0) {
+        alert("Lista de contatos vazia!");
+    } else if (divCadastrosGeral) {
+        divCadastrosGeral.innerHTML = '';
+    }
+
     // Loop através de cada cadastro
     for (let i = 0; i < cadastros.length; i++) {
 
@@ -74,8 +83,8 @@ function exibir() {
         // Adiciona id único para cada div
         divCadastro.setAttribute('id', 'divCad' + i);
 
-        // Adiciona dados ao final da tag 'article'
-        article.appendChild(divCadastro);
+        // Adiciona dados ao final da div 'divCadastros'
+        divCadastrosGeral.appendChild(divCadastro);
     }
 }
 
