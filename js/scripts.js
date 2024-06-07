@@ -95,11 +95,7 @@ function buscarContato() {
     
     let cpf = String(prompt("Digite o CPF do contato que deseja buscar:"));
 
-    // teste:
-    console.log("CPF: " + cpf);
-    console.log("Typo cpf: " + typeof(cpf))
-
-    // Buscar cpf
+    // Buscar por cpf
     for (indice in cadastros) {
         if (cpf === cadastros[indice].cpf) {
             // Retorno da busca pelo cpf
@@ -114,7 +110,27 @@ function buscarContato() {
     alert("CPF não encontrado!")
 }
 
+/**
+ * Função Remover Contato
+ */
+function removerContato() {
 
+    let cpf = String(prompt("Digite o CPF do contato que deseja remover:"));
+
+    // Buscar por cpf
+    for (indice in cadastros) {
+        if (cpf === cadastros[indice].cpf) {
+            // remove contato
+            //cadastros[indice].delete;
+            delete cadastros[indice];
+            alert("Contato excluído com sucesso!");
+            return;
+        }        
+    }
+
+    // Caso o CPF não seja encontrado
+    alert("CPF não encontrado!")
+}
 
 // Teste: print vetor
 function testePrintCadastro () {
