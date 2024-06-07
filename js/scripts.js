@@ -29,7 +29,7 @@ function cadastrar() {
     cadastros.push(novoCadastro);
 
     // Limpa campos de entrada do formulários
-    //document.getElementById('formulario').reset();
+    document.getElementById('formulario').reset();
 
     // Teste:
     testePrintCadastro();
