@@ -29,7 +29,11 @@ function cadastrar() {
     cadastros.push(novoCadastro);
 
     // Limpa campos de entrada do formulários
-    document.getElementById('formulario').reset();
+    //document.getElementById('formulario').reset();
+
+    // Teste:
+    testePrintCadastro();
+
     alert('Contato salvo com sucesso!');
 }
 
@@ -46,12 +50,10 @@ function exibir() {
     var divCadastro = document.createElement('div');
     
     // Cria div's filhas
-    for (let i = 0; i < cadastros.length; i++) {
         var divNome = document.createElement('div');
         var divCpf = document.createElement('div');
         var divData = document.createElement('div');
         var divEndereco = document.createElement('div');
-    }
 
     // Seta dados nas div's filhas
     for (let i = 0; i < cadastros.length; i++) {
@@ -76,3 +78,14 @@ function exibir() {
     article.appendChild(divCadastro);
 }
 
+
+// Teste: print vetor
+function testePrintCadastro () {
+    console.log("Vetor: ");
+    for (let index = 0; index < cadastros.length; index++) {
+        console.log(cadastros[index].nome + ", ");
+        console.log(cadastros[index].cpf + ", ");
+        console.log(cadastros[index].dataNascimento + ", ");
+        console.log(cadastros[index].endereco  + ", ");    
+    }
+}
