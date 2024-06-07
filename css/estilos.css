@@ -24,7 +24,7 @@
     border-radius: 12px;
 }
 
-#divCad{
+div[id^='divCad']{
     background-color: white;
     margin-top: 36px;
     margin-inline: 36px;

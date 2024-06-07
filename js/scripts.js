@@ -46,36 +46,37 @@ function exibir() {
     // Recupera conteúdo da tag 'article'
     var article = document.querySelector('article');
 
-    // Cria div pai
-    var divCadastro = document.createElement('div');
-    
-    // Cria div's filhas
+    // Loop através de cada cadastro
+    for (let i = 0; i < cadastros.length; i++) {
+
+        // Cria div pai
+        var divCadastro = document.createElement('div');
+        
+        // Cria div's filhas
         var divNome = document.createElement('div');
         var divCpf = document.createElement('div');
         var divData = document.createElement('div');
         var divEndereco = document.createElement('div');
 
-    // Seta dados nas div's filhas
-    for (let i = 0; i < cadastros.length; i++) {
+        // Seta dados nas div's filhas
         divNome.textContent = cadastros[i].nome;
         divCpf.textContent = cadastros[i].cpf;
         divData.textContent = cadastros[i].dataNascimento;
         divEndereco.textContent = cadastros[i].endereco;
-    }
 
-    // Adiciona dados na div 'divCadastro'
-    for (let i = 0; i < cadastros.length; i++) {
+        // Adiciona dados na div 'divCadastro'
         divCadastro.appendChild(divNome);
         divCadastro.appendChild(divCpf);
         divCadastro.appendChild(divData);
         divCadastro.appendChild(divEndereco);
+
+        // Adiciona id e altera/adiciona CSS na div 'divCadastro'
+        // Adiciona id único para cada div
+        divCadastro.setAttribute('id', 'divCad' + i);
+
+        // Adiciona dados ao final da tag 'article'
+        article.appendChild(divCadastro);
     }
-
-    // Adiciona id e altera/adiciona CSS na div 'divCadastro':
-    divCadastro.setAttribute('id', 'divCad');
-
-    // Adiciona dados ao final da tag 'article'
-    article.appendChild(divCadastro);
 }
 
 
