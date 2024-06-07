@@ -19,7 +19,7 @@ function cadastrar() {
 
     // Verifica se o CPF já está cadastrado
     for (let i = 0; i < cadastros.length; i++) {
-        if (cadastros[i].cpf === novoCadastro.cpf) {
+        if (cadastros[i].cpf == novoCadastro.cpf) {
             alert('CPF já cadastrado!');
             return;
         }
@@ -47,7 +47,7 @@ function exibir() {
     var article = document.querySelector('article');
 
     // Verifica se a div 'divCadastrosGeral' está vazia e se o vetor 'cadastros' também está vazio
-    // senão, limpa os dados para eviar a duplicação de dados
+    // senão, limpa os dados para evitar a duplicação de dados
     var divCadastrosGeral = document.getElementById('divCadastrosGeral');
     if (divCadastrosGeral && divCadastrosGeral.innerHTML == '' && cadastros.length == 0) {
         alert("Lista de contatos vazia!");
@@ -97,7 +97,7 @@ function buscarContato() {
 
     // Buscar por cpf
     for (indice in cadastros) {
-        if (cpf === cadastros[indice].cpf) {
+        if (cpf == cadastros[indice].cpf) {
             // Retorno da busca pelo cpf
             alert("Nome: " + cadastros[indice].nome + "\n"
                 + "Data de Nascimento: " + cadastros[indice].dataNascimento + "\n"
@@ -115,11 +115,15 @@ function buscarContato() {
  */
 function removerContato() {
 
+    // Limpa os dados da tela
+    var divCadastrosGeral = document.getElementById('divCadastrosGeral');
+    divCadastrosGeral.innerHTML = '';
+
     let cpf = String(prompt("Digite o CPF do contato que deseja remover:"));
 
     // Buscar por cpf
     for (indice in cadastros) {
-        if (cpf === cadastros[indice].cpf) {
+        if (cpf == cadastros[indice].cpf) {
             // remove contato
             //cadastros[indice].delete;
             delete cadastros[indice];
