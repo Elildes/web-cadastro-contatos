@@ -47,37 +47,37 @@ function exibir() {
  * Função exibir contatos
  */
 function exibir() {
+
+    // Recupera conteúdo da tag 'article'
     var article = document.querySelector('article');
 
+    // Cria div pai
     var divCadastro = document.createElement('div');
     
+    // Cria div's filhas
     var divNome = document.createElement('div');
     var divCpf = document.createElement('div');
     var divData = document.createElement('div');
     var divEndereco = document.createElement('div');
-    var novaLinha = document.createElement('br');
 
+    // Seta dados nas div's filhas
     divNome.textContent = cadastros[0].nome;
     divCpf.textContent = cadastros[0].cpf;
     divData.textContent = cadastros[0].dataNascimento;
     divEndereco.textContent = cadastros[0].endereco;
 
-    // Adiciona dados ao final da page
+    // Teste: Adiciona dados na div 'divCadastro'
     // Obs.: exibe apenas dados de uma pessoa.
     // Implementar loop para exibir todos
-    /**
-    article.appendChild(divNome);
-    article.appendChild(divCpf);
-    article.appendChild(divData);
-    article.appendChild(divEndereco);
-    article.appendChild(novaLinha);
-     */
     divCadastro.appendChild(divNome);
     divCadastro.appendChild(divCpf);
     divCadastro.appendChild(divData);
     divCadastro.appendChild(divEndereco);
-    divCadastro.appendChild(novaLinha);
 
+    // Adiciona id e altera/adiciona CSS na div 'divCadastro':
+    divCadastro.setAttribute('id', 'divCad');
+
+    // Adiciona dados ao final da tag 'article'
     article.appendChild(divCadastro);
 }
 
