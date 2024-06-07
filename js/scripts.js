@@ -27,6 +27,9 @@ function cadastrar() {
 
     // Se o CPF não estiver cadastrado, adiciona o novo cadastro ao vetor
     cadastros.push(novoCadastro);
+
+    // Limpa campos de entrada do formulários
+    document.getElementById('formulario').reset();
     alert('Contato salvo com sucesso!');
 }
 
