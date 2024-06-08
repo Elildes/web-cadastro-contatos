@@ -10,6 +10,12 @@ function cadastrar() {
     let dataNascimento_ = document.getElementById('data-nascimento').value;
     let endereco_ = document.getElementById('endereco').value;
 
+    // Alerta se algum campo estiver vazio
+    if (nome_ == '' || cpf_ == '' || dataNascimento_ == '' || endereco_ == '') {
+        alert("Preencha todos os campos do formulário!");
+        return;
+    }
+
     let novoCadastro = {
         nome: nome_,
         cpf: cpf_,
