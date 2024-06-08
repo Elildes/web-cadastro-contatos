@@ -51,6 +51,7 @@ function exibir() {
     var divCadastrosGeral = document.getElementById('divCadastrosGeral');
     if (divCadastrosGeral && divCadastrosGeral.innerHTML == '' && cadastros.length == 0) {
         alert("Lista de contatos vazia!");
+        return;
     } else if (divCadastrosGeral) {
         divCadastrosGeral.innerHTML = '';
     }
@@ -122,11 +123,11 @@ function removerContato() {
     let cpf = String(prompt("Digite o CPF do contato que deseja remover:"));
 
     // Buscar por cpf
-    for (indice in cadastros) {
+    for (let indice = 0; indice < cadastros.length; indice++) {
         if (cpf == cadastros[indice].cpf) {
             // remove contato
-            //cadastros[indice].delete;
-            delete cadastros[indice];
+            cadastros.splice(indice, 1);
+
             alert("Contato excluído com sucesso!");
             return;
         }        
